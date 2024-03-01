@@ -1,0 +1,201 @@
+/** @format */
+
+/* Navigation Wrapper */
+.navbar {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* color: var(--third);
+  background-color: var(--primary); */
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 2px 6px 6px rgb(0, 0, 0, 0.07);
+}
+
+/* Navigation Links and Logo */
+.layer-two {
+  width: 100%;
+  /* padding: 0 50px; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.company-logo {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.company-logo img {
+  width: 120px;
+}
+
+/* Navigation links */
+.navbar-links {
+  display: block;
+}
+.navbar-links ul {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  font-size: 1.1rem;
+  list-style: none;
+}
+
+.nav-link {
+  color: var(--third);
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.7rem;
+  text-decoration-color: var(--secondary);
+  color: var(--secondary);
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--black-color);
+}
+.profile .user-icon {
+  font-size: 1.8em;
+}
+.profile .username {
+  font-size: 0.65em;
+}
+
+/* drop down  */
+/* The dropdown container */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: var(--third);
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown .dropdown-content a:hover {
+  background-color: var(--third);
+  color: var(--primary);
+  text-decoration: underline;
+  text-underline-offset: 0.3rem;
+  text-decoration-color: var(--primary);
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  gap: 10px;
+  display: none;
+  position: absolute;
+  background-color: var(--secondary);
+  color: var(--primary);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: var(--primary);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: var(--primary);
+  color: var(--secondary);
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* *********MEDIA QUERIES************** */
+
+/* Mobile screens responsive */
+/*  Mobile screen - nav bar*/
+.mobile-navbar-links {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 200px;
+  height: 50vh;
+  background-color: var(--primary);
+  box-shadow: 1px 4px 6px rgb(0, 0, 0, 0.5);
+  gap: 20px;
+  padding: 20px 20px 0px 40px;
+  margin-right: -200px;
+}
+.mobile-navbar-links ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+/* show icon */
+.show-nav-btn {
+  display: none;
+  border: none;
+  background-color: transparent;
+}
+.show-nav-btn i {
+  font-size: 2em;
+  cursor: pointer;
+}
+
+@media (max-width: 794px) {
+  .mobile-navbar-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0;
+  }
+
+  .navbar-links {
+    display: none;
+  }
+  .show-nav-btn {
+    display: flex;
+  }
+  .cancel-nav {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 1.9rem;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 300px) {
+  .company-logo {
+    width: 80px;
+  }
+  .layer-two {
+    padding: 10px 20px;
+  }
+
+  .show-nav-btn i {
+    font-size: 1.8em;
+  }
+}
